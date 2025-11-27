@@ -56,4 +56,485 @@
 
         // Definiciones de iconos usados
         const Icons = {
-            Calendar: (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2
+            Calendar: (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>,
+            Users: (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>,
+            Megaphone: (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m3 11 18-5v12L3 14v-3z"></path><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"></path></svg>,
+            Briefcase: (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>,
+            CheckCircle: (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>,
+            Clock: (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>,
+            Award: (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>,
+            Layout: (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>,
+            PieChart: (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>,
+            AlertTriangle: (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>,
+            Handshake: (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m11 17 2 2a2 2 0 1 0 2.8-2.8l-2-2 2-2a2 2 0 1 0-2.8-2.8l-2 2"></path><path d="m16 5 3 3"></path><path d="M2 22v-3l4-5 5 5"></path><path d="M12 12 9 9"></path><path d="m11 7 5 5"></path></svg>,
+            MapPin: (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>,
+            Info: (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>,
+            ChevronRight: (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>,
+            Coffee: (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"></path><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>,
+            Activity: (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+        };
+
+        // --- COMPONENTES UI SIMULADOS (Reemplazo de shadcn/ui) ---
+        const Card = ({ children, className }) => <div className={`rounded-xl border bg-white text-stone-950 shadow-sm ${className}`}>{children}</div>;
+        const CardHeader = ({ children, className }) => <div className={`flex flex-col space-y-1.5 p-6 ${className}`}>{children}</div>;
+        const CardTitle = ({ children, className }) => <h3 className={`font-semibold leading-none tracking-tight ${className}`}>{children}</h3>;
+        const CardDescription = ({ children, className }) => <p className={`text-sm text-stone-500 ${className}`}>{children}</p>;
+        const CardContent = ({ children, className }) => <div className={`p-6 pt-0 ${className}`}>{children}</div>;
+        const CardFooter = ({ children, className }) => <div className={`flex items-center p-6 pt-0 ${className}`}>{children}</div>;
+        
+        const Progress = ({ value, className }) => (
+            <div className={`relative h-2 w-full overflow-hidden rounded-full bg-stone-200 ${className}`}>
+                <div className="h-full w-full flex-1 bg-green-600 transition-all" style={{ transform: `translateX(-${100 - (value || 0)}%)` }}></div>
+            </div>
+        );
+
+        // --- GRÁFICOS ---
+        const DonutChart = ({ data, colors, title }) => {
+            const total = data.reduce((acc, item) => acc + item.value, 0);
+            let currentAngle = 0;
+            return (
+                <div className="flex flex-col items-center justify-center p-4">
+                    <div className="relative w-48 h-48">
+                        <svg viewBox="0 0 100 100" className="transform -rotate-90 w-full h-full shadow-sm rounded-full">
+                            {data.map((item, index) => {
+                                const angle = (item.value / total) * 360;
+                                const x1 = 50 + 40 * Math.cos((Math.PI * currentAngle) / 180);
+                                const y1 = 50 + 40 * Math.sin((Math.PI * currentAngle) / 180);
+                                const x2 = 50 + 40 * Math.cos((Math.PI * (currentAngle + angle)) / 180);
+                                const y2 = 50 + 40 * Math.sin((Math.PI * (currentAngle + angle)) / 180);
+                                const largeArcFlag = angle > 180 ? 1 : 0;
+                                const pathData = `M 50 50 L ${x1} ${y1} A 40 40 0 ${largeArcFlag} 1 ${x2} ${y2} Z`;
+                                currentAngle += angle;
+                                return <path key={index} d={pathData} fill={colors[index % colors.length]} stroke="white" strokeWidth="1" className="hover:opacity-90 transition-opacity cursor-pointer"/>;
+                            })}
+                            <circle cx="50" cy="50" r="25" fill="white" />
+                        </svg>
+                        {title && (
+                            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                <span className="text-[10px] font-bold text-center text-gray-400 leading-tight">{title}</span>
+                            </div>
+                        )}
+                    </div>
+                    <div className="mt-4 grid grid-cols-2 gap-x-4 gap-y-1">
+                        {data.map((item, index) => (
+                            <div key={index} className="flex items-center text-xs">
+                                <span className="w-2.5 h-2.5 rounded-full mr-2 shadow-sm" style={{ backgroundColor: colors[index % colors.length] }}></span>
+                                <span className="text-gray-600 truncate max-w-[100px]">{item.name}: <strong>{item.value}</strong></span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            );
+        };
+
+        const HorizontalBarChart = ({ data, color }) => {
+            return (
+                <div className="space-y-3 w-full">
+                    {data.map((item, index) => (
+                        <div key={index} className="w-full">
+                            <div className="flex justify-between text-xs mb-1 font-medium text-gray-700">
+                                <span>{item.label}</span>
+                                <span>{item.value}%</span>
+                            </div>
+                            <div className="w-full bg-gray-100 rounded-full h-3 overflow-hidden">
+                                <div className={`h-full rounded-full ${color} transition-all duration-1000 ease-out`} style={{ width: `${(item.value / item.max) * 100}%` }}></div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            );
+        };
+
+        // --- DASHBOARD PRINCIPAL ---
+        const DashboardCongreso = () => {
+            const [activeTab, setActiveTab] = useState('general');
+
+            // Datos
+            const aliadosData = [
+                { name: "Insumos Médicos", value: 10 },
+                { name: "Universidades", value: 4 },
+                { name: "Café/Alimentos", value: 3 }
+            ];
+
+            const asistentesData = [
+                { name: "Estudiantes UTP", value: 140 },
+                { name: "Externos/Profesionales", value: 40 },
+                { name: "Staff/Ponentes", value: 20 }
+            ];
+
+            const cumplimientoData = [
+                { label: "Gestión Financiera (Patrocinios)", value: 91, max: 100 },
+                { label: "Logística (Montaje y Tiempos)", value: 98, max: 100 },
+                { label: "Comunicaciones (Cobertura)", value: 100, max: 100 },
+                { label: "Asistencia (Aforo)", value: 100, max: 100 }
+            ];
+
+            const phases = {
+                antes: [
+                    {
+                        name: "Gestión y Alianzas",
+                        lead: "David Muñoz & Andrés Álvarez",
+                        icon: Icons.Briefcase,
+                        color: "text-blue-700",
+                        border: "border-blue-500",
+                        bg: "bg-blue-50",
+                        indicators: [
+                            { item: "Base de Datos Aliados", meta: "1 BD", ejec: "1 BD", perc: 100 },
+                            { item: "Contactar Empresas Insumos", meta: "11", ejec: "10", perc: 91 },
+                            { item: "Contactar IPS/Brigadas", meta: "12", ejec: "7", perc: 58 },
+                            { item: "Gestión Universidades", meta: "5", ejec: "5", perc: 100 }
+                        ]
+                    },
+                    {
+                        name: "Logística",
+                        lead: "Santiago Rendón & Leymar Portilla",
+                        icon: Icons.Layout,
+                        color: "text-amber-700",
+                        border: "border-amber-500",
+                        bg: "bg-amber-50",
+                        indicators: [
+                            { item: "Contactar Ponentes", meta: "20", ejec: "20", perc: 100 },
+                            { item: "Diseño Certificados", meta: "1", ejec: "1", perc: 100 },
+                            { item: "Gestión Mobiliario", meta: "100%", ejec: "100%", perc: 100 },
+                            { item: "Decoración Cafetera", meta: "50 ítems", ejec: "50", perc: 100 }
+                        ]
+                    },
+                    {
+                        name: "Comunicaciones",
+                        lead: "Joan Sebastian Arango",
+                        icon: Icons.Megaphone,
+                        color: "text-green-700",
+                        border: "border-green-500",
+                        bg: "bg-green-50",
+                        indicators: [
+                            { item: "Manual de Marca", meta: "1", ejec: "1", perc: 100 },
+                            { item: "Campaña Expectativa", meta: "3 Olas", ejec: "3 Olas", perc: 100 },
+                            { item: "Video Teaser", meta: "1", ejec: "1", perc: 100 },
+                            { item: "Diseño Escarapelas", meta: "3 Tipos", ejec: "3 Tipos", perc: 100 }
+                        ]
+                    }
+                ],
+                durante: [
+                    {
+                        name: "Gestión y Alianzas",
+                        lead: "Equipo Gestión",
+                        icon: Icons.Briefcase,
+                        color: "text-blue-700",
+                        border: "border-blue-500",
+                        bg: "bg-blue-50",
+                        indicators: [
+                            { item: "Supervisión Stands", meta: "15", ejec: "15", perc: 100 },
+                            { item: "Entrega Refrigerios", meta: "200", ejec: "200", perc: 100 },
+                            { item: "Registro Aliados", meta: "17", ejec: "15", perc: 88 }
+                        ]
+                    },
+                    {
+                        name: "Logística",
+                        lead: "Equipo Logística",
+                        icon: Icons.Layout,
+                        color: "text-amber-700",
+                        border: "border-amber-500",
+                        bg: "bg-amber-50",
+                        indicators: [
+                            { item: "Soporte Auditorio", meta: "100%", ejec: "100%", perc: 100 },
+                            { item: "Control Asistencia", meta: "200", ejec: "200", perc: 100 },
+                            { item: "Talleres Edif. 14", meta: "6", ejec: "6", perc: 100 }
+                        ]
+                    },
+                    {
+                        name: "Comunicaciones",
+                        lead: "Equipo Comunicaciones",
+                        icon: Icons.Megaphone,
+                        color: "text-green-700",
+                        border: "border-green-500",
+                        bg: "bg-green-50",
+                        indicators: [
+                            { item: "Cobertura Ponencias", meta: "12", ejec: "12", perc: 100 },
+                            { item: "Entrevistas", meta: "10", ejec: "8", perc: 80 },
+                            { item: "Stories en Vivo", meta: "50", ejec: "50+", perc: 100 }
+                        ]
+                    }
+                ],
+                despues: [
+                    {
+                        name: "Cierre General",
+                        lead: "Todas las Comisiones",
+                        icon: Icons.CheckCircle,
+                        color: "text-purple-700",
+                        border: "border-purple-500",
+                        bg: "bg-purple-50",
+                        indicators: [
+                            { item: "Cartas Agradecimiento", meta: "17", ejec: "17", perc: 100 },
+                            { item: "Certificados Enviados", meta: "200", ejec: "200", perc: 100 },
+                            { item: "Memorias Digitales", meta: "1 Pack", ejec: "1 Pack", perc: 100 },
+                            { item: "Informe Final", meta: "1", ejec: "1", perc: 100 }
+                        ]
+                    }
+                ]
+            };
+
+            return (
+                <div className="min-h-screen bg-stone-100 p-4 md:p-6 font-sans text-stone-800">
+                
+                    {/* --- HEADER --- */}
+                    <header className="relative bg-stone-900 rounded-2xl shadow-xl overflow-hidden mb-8 border-b-8 border-amber-600">
+                        <div className="absolute inset-0 z-0">
+                            {/* IMAGEN DE FONDO: Cambiar 'https://placehold.co...' por tu archivo local 'image_2141b3.jpg' */}
+                            <img 
+                                src="https://placehold.co/1200x400/292524/78350f?text=Fondo+Congreso" 
+                                alt="Fondo Congreso" 
+                                className="w-full h-full object-cover opacity-40 mix-blend-overlay"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-r from-stone-900 via-stone-900/90 to-transparent"></div>
+                        </div>
+
+                        <div className="relative z-10 p-6 flex flex-col md:flex-row items-center gap-8">
+                            {/* Logo Container */}
+                            <div className="w-40 h-40 bg-white/10 backdrop-blur-md rounded-full border-2 border-amber-500/50 flex items-center justify-center shrink-0 shadow-2xl p-4">
+                                {/* LOGO: Cambiar src por tu archivo 'logotipo congreso medicina prehospitalaria (2).png' */}
+                                <img 
+                                    src="https://placehold.co/150x150/FFF/B45309?text=Logo+XI+Congreso" 
+                                    alt="Logo Congreso" 
+                                    className="w-full h-full object-contain filter drop-shadow-lg"
+                                />
+                            </div>
+                            
+                            <div className="text-center md:text-left text-white flex-1">
+                                <div className="inline-flex items-center px-3 py-1 rounded-full bg-amber-600/30 border border-amber-500 text-amber-300 text-xs font-bold mb-3 uppercase tracking-wider">
+                                    <Icons.Coffee className="w-3 h-3 mr-2" /> Edición Especial: Identidad Cafetera
+                                </div>
+                                <h1 className="text-3xl md:text-5xl font-extrabold leading-tight mb-2">
+                                    XI Congreso Nacional <br/>
+                                    <span className="text-amber-500">Medicina Prehospitalaria</span>
+                                </h1>
+                                <div className="flex flex-wrap gap-4 mt-4 justify-center md:justify-start">
+                                    <span className="flex items-center text-sm font-medium bg-white/10 px-4 py-2 rounded-lg border border-white/5">
+                                        <Icons.Calendar className="w-4 h-4 mr-2 text-amber-400" /> 23-25 Octubre 2025
+                                    </span>
+                                    <span className="flex items-center text-sm font-medium bg-white/10 px-4 py-2 rounded-lg border border-white/5">
+                                        <Icons.MapPin className="w-4 h-4 mr-2 text-amber-400" /> Aud. Jorge Roa & Edificio 14 (UTP)
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+
+                    {/* --- NAVEGACIÓN (TABS) --- */}
+                    <div className="space-y-6">
+                        <div className="sticky top-4 z-50 bg-white/95 backdrop-blur-sm p-2 rounded-xl shadow-md border border-stone-200">
+                            <div className="grid grid-cols-2 md:grid-cols-4 w-full bg-stone-100 p-1 gap-1 rounded-lg">
+                                {[
+                                    { id: 'general', label: 'Visión General', icon: Icons.PieChart },
+                                    { id: 'antes', label: '1. Pre-Evento', icon: Icons.Clock },
+                                    { id: 'durante', label: '2. Durante', icon: Icons.Activity },
+                                    { id: 'despues', label: '3. Post-Evento', icon: Icons.CheckCircle }
+                                ].map(tab => (
+                                    <button
+                                        key={tab.id}
+                                        onClick={() => setActiveTab(tab.id)}
+                                        className={`flex items-center justify-center px-3 py-2 text-sm font-medium rounded-md transition-all ${
+                                            activeTab === tab.id 
+                                            ? 'bg-amber-600 text-white shadow-sm' 
+                                            : 'text-stone-600 hover:bg-stone-200'
+                                        }`}
+                                    >
+                                        <tab.icon className="w-4 h-4 mr-2" /> {tab.label}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* --- CONTENIDO TABS --- */}
+                        
+                        {/* TAB GENERAL */}
+                        {activeTab === 'general' && (
+                            <div className="space-y-6 fade-in">
+                                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                    <Card className="shadow-lg border-t-4 border-blue-600">
+                                        <CardHeader className="pb-2">
+                                            <CardTitle className="text-lg text-blue-900 text-center">Aliados Estratégicos</CardTitle>
+                                            <CardDescription className="text-center">Total: 17 Entidades</CardDescription>
+                                        </CardHeader>
+                                        <CardContent>
+                                            <DonutChart 
+                                                data={aliadosData} 
+                                                colors={['#1e40af', '#3b82f6', '#93c5fd']} 
+                                                title="Gestión"
+                                            />
+                                        </CardContent>
+                                    </Card>
+
+                                    <Card className="shadow-lg border-t-4 border-amber-600">
+                                        <CardHeader className="pb-2">
+                                            <CardTitle className="text-lg text-amber-900 text-center">Asistencia</CardTitle>
+                                            <CardDescription className="text-center">Total: ~200 Participantes</CardDescription>
+                                        </CardHeader>
+                                        <CardContent>
+                                            <DonutChart 
+                                                data={asistentesData} 
+                                                colors={['#b45309', '#f59e0b', '#fcd34d']}
+                                                title="Aforo"
+                                            />
+                                        </CardContent>
+                                    </Card>
+
+                                    <Card className="shadow-lg border-t-4 border-green-600">
+                                        <CardHeader className="pb-2">
+                                            <CardTitle className="text-lg text-green-900 text-center">Cumplimiento Global</CardTitle>
+                                            <CardDescription className="text-center">Por áreas de gestión</CardDescription>
+                                        </CardHeader>
+                                        <CardContent className="pt-6">
+                                            <HorizontalBarChart data={cumplimientoData} color="bg-green-600" />
+                                        </CardContent>
+                                    </Card>
+                                </div>
+
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <Card className="bg-gradient-to-br from-white to-green-50 border border-green-200">
+                                        <CardHeader>
+                                            <CardTitle className="flex items-center text-green-800"><Icons.Award className="w-5 h-5 mr-2" /> Fortalezas</CardTitle>
+                                        </CardHeader>
+                                        <CardContent>
+                                            <ul className="space-y-2 text-sm text-green-900 font-medium">
+                                                <li className="flex items-start"><Icons.CheckCircle className="w-4 h-4 mr-2 mt-0.5 text-green-600"/> Identidad Cafetera clara y transversal.</li>
+                                                <li className="flex items-start"><Icons.CheckCircle className="w-4 h-4 mr-2 mt-0.5 text-green-600"/> Capacidad de gestión (17 aliados sin presupuesto inicial).</li>
+                                                <li className="flex items-start"><Icons.CheckCircle className="w-4 h-4 mr-2 mt-0.5 text-green-600"/> Trabajo articulado entre 3 comisiones.</li>
+                                            </ul>
+                                        </CardContent>
+                                    </Card>
+                                    <Card className="bg-gradient-to-br from-white to-red-50 border border-red-200">
+                                        <CardHeader>
+                                            <CardTitle className="flex items-center text-red-800"><Icons.AlertTriangle className="w-5 h-5 mr-2" /> Oportunidades de Mejora</CardTitle>
+                                        </CardHeader>
+                                        <CardContent>
+                                            <ul className="space-y-2 text-sm text-red-900 font-medium">
+                                                <li className="flex items-start"><Icons.Info className="w-4 h-4 mr-2 mt-0.5 text-red-600"/> Mayor anticipación en piezas gráficas.</li>
+                                                <li className="flex items-start"><Icons.Info className="w-4 h-4 mr-2 mt-0.5 text-red-600"/> Recursos técnicos propios limitados.</li>
+                                                <li className="flex items-start"><Icons.Info className="w-4 h-4 mr-2 mt-0.5 text-red-600"/> Dependencia alta de gestión externa para decoración.</li>
+                                            </ul>
+                                        </CardContent>
+                                    </Card>
+                                </div>
+                            </div>
+                        )}
+
+                        {/* TABS FASES */}
+                        {['antes', 'durante', 'despues'].map((phaseKey) => (
+                            activeTab === phaseKey && (
+                                <div key={phaseKey} className="grid grid-cols-1 gap-6 fade-in">
+                                    {phases[phaseKey].map((commission, idx) => {
+                                        const IconComp = commission.icon;
+                                        return (
+                                            <Card key={idx} className={`border-l-8 ${commission.border} shadow-md overflow-hidden`}>
+                                                <CardHeader className={`${commission.bg} border-b border-stone-100 py-4`}>
+                                                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                                                        <div className="flex items-center gap-4">
+                                                            <div className={`p-3 rounded-full bg-white shadow-sm ${commission.color}`}>
+                                                                <IconComp className="w-6 h-6" />
+                                                            </div>
+                                                            <div>
+                                                                <CardTitle className={`text-xl ${commission.color}`}>{commission.name}</CardTitle>
+                                                                <CardDescription className="flex items-center mt-1 text-stone-600 font-medium">
+                                                                    <Icons.Users className="w-3 h-3 mr-1" /> Líderes: {commission.lead}
+                                                                </CardDescription>
+                                                            </div>
+                                                        </div>
+                                                        <div className="bg-white px-4 py-2 rounded-lg border border-stone-200 shadow-sm">
+                                                            <span className="text-xs uppercase font-bold text-stone-400">Estado Fase</span>
+                                                            <div className="flex items-center text-green-600 font-bold text-sm">
+                                                                <Icons.CheckCircle className="w-4 h-4 mr-1" /> Completado 100%
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </CardHeader>
+                                                
+                                                <CardContent className="p-0">
+                                                    <div className="overflow-x-auto">
+                                                        <table className="w-full text-sm text-left">
+                                                            <thead className="bg-stone-50 text-stone-500 uppercase text-xs font-bold border-b border-stone-200">
+                                                                <tr>
+                                                                    <th className="px-6 py-4">Indicador / Actividad</th>
+                                                                    <th className="px-6 py-4 text-center">Meta</th>
+                                                                    <th className="px-6 py-4 text-center">Ejecutado</th>
+                                                                    <th className="px-6 py-4 text-center">Estado</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody className="divide-y divide-stone-100">
+                                                                {commission.indicators.map((ind, i) => (
+                                                                    <tr key={i} className="hover:bg-stone-50/50 transition-colors">
+                                                                        <td className="px-6 py-4 font-medium text-stone-700 flex items-center">
+                                                                            <Icons.ChevronRight className="w-3 h-3 mr-2 text-stone-400" />
+                                                                            {ind.item}
+                                                                        </td>
+                                                                        <td className="px-6 py-4 text-center text-stone-500">{ind.meta}</td>
+                                                                        <td className="px-6 py-4 text-center font-bold text-stone-800">{ind.ejec}</td>
+                                                                        <td className="px-6 py-4 text-center">
+                                                                            <div className="flex items-center justify-center gap-2">
+                                                                                <Progress value={ind.perc} className={`w-16 h-2 ${
+                                                                                    ind.perc >= 100 ? 'bg-green-100' : 'bg-amber-100'
+                                                                                }`} />
+                                                                                <span className={`text-xs font-bold ${
+                                                                                    ind.perc >= 100 ? 'text-green-700' : 
+                                                                                    ind.perc >= 80 ? 'text-amber-700' : 'text-red-700'
+                                                                                }`}>
+                                                                                    {ind.perc}%
+                                                                                </span>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </CardContent>
+                                                <CardFooter className="bg-stone-50/50 p-3 text-xs text-stone-500 italic border-t border-stone-100 flex items-center justify-center">
+                                                    <Icons.Info className="w-3 h-3 mr-1" /> Datos extraídos del informe final de {commission.name}
+                                                </CardFooter>
+                                            </Card>
+                                        );
+                                    })}
+                                </div>
+                            )
+                        ))}
+                    </div>
+
+                    {/* --- FOOTER --- */}
+                    <div className="mt-8">
+                        <Card className="border-t-4 border-stone-600 shadow-xl bg-stone-800 text-stone-100">
+                            <CardHeader>
+                                <CardTitle className="flex items-center text-white">
+                                    <Icons.Handshake className="w-6 h-6 mr-3 text-amber-500" /> 
+                                    Resumen de Alianzas (Matriz)
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                                    <div className="p-4 bg-stone-700/50 rounded-lg border border-stone-600">
+                                        <p className="text-amber-400 text-2xl font-bold">17</p>
+                                        <p className="text-xs uppercase tracking-wider opacity-80">Aliados Totales</p>
+                                    </div>
+                                    <div className="p-4 bg-stone-700/50 rounded-lg border border-stone-600">
+                                        <p className="text-blue-400 text-2xl font-bold">5</p>
+                                        <p className="text-xs uppercase tracking-wider opacity-80">Universidades</p>
+                                    </div>
+                                    <div className="p-4 bg-stone-700/50 rounded-lg border border-stone-600">
+                                        <p className="text-green-400 text-2xl font-bold">10</p>
+                                        <p className="text-xs uppercase tracking-wider opacity-80">Empresas Privadas</p>
+                                    </div>
+                                    <div className="p-4 bg-stone-700/50 rounded-lg border border-stone-600">
+                                        <p className="text-purple-400 text-2xl font-bold">2</p>
+                                        <p className="text-xs uppercase tracking-wider opacity-80">Cooperativas</p>
+                                    </div>
+                                </div>
+                            </CardContent>
+                        </Card>
+                    </div>
+                </div>
+            );
+        };
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<DashboardCongreso />);
+    </script>
+</body>
+</html>
